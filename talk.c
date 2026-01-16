@@ -8,6 +8,8 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 
+#define PORT 3490
+
 int main(int argc, char *argv[]) {
 	if (argc != 3) {
 		fprintf(stderr, "usage: talk hostname message\n");
@@ -23,7 +25,7 @@ int main(int argc, char *argv[]) {
 	hints.ai_socktype = SOCK_DGRAM;
 	hints.ai_family = AF_INET;
 
-	if ((rv = getaddrinfo(argv[1], "3490", &hints, &res)) == -1) {
+	if ((rv = getaddrinfo(NULL, "3490", &hints, &res)) == -1) {
 		fprintf(stderr, "Shit happened during addrinfo()!");
 		return 1;
 	}
