@@ -1,5 +1,5 @@
 # ⚡ UDP Server and Client in (pure) C
-A very simple server and client written in pure C that communicate using the User Datagram Protocol.
+A very simple server and client written in pure C that communicates using the User Datagram Protocol.
 This was made as an implementation of Datagram Sockets as part of CS206.
 
 # Technologies
